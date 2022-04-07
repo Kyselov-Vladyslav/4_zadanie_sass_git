@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Syne+Tactile&family=Ubuntu&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+strike, strong, sub, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.container, footer, header {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
+  background-color: #ffffff;
+}
+
+.zaglowek {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+  background-color: #ffffff;
+}
+
+.container__calculate {
+  box-shadow: 0 0px 10px #1875f0;
+  border-radius: 6px;
+  background-color: #ffffff;
+}
+
+.container, .flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 100ch;
+  background-color: #f7f7f7;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  padding: 25px;
+}
+
+h1 {
+  color: #666666;
+  font-size: 35px;
+  font-weight: 900;
+  text-align: center;
+}
+
+main {
+  min-height: 100vh;
+  margin-bottom: 20px;
+}
+
+.zaglowek {
+  margin: auto;
+  padding: 0 30px 0 70px;
+  display: flex;
+  width: 80%;
+  height: 60px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h2 {
+  color: #666666;
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.zaglowek__right {
+  display: flex;
+  align-items: center;
+}
+
+.zaglowek__item {
+  display: flex;
+  color: #b8b8b8;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 2.14;
+}
+.zaglowek__item + .zaglowek__item {
+  margin-left: 30px;
+}
+.zaglowek__item a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.1s ease-in;
+}
+.zaglowek__item a:hover {
+  color: #1875f0;
+  text-decoration: none;
+}
+
+.zaglowek__img {
+  margin-left: 5px;
+  margin-right: 10px;
+  width: 12px;
+}
+
+.opis {
+  margin: auto;
+  width: 80%;
+}
+
+.opis a {
+  color: #1875f0;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.1s ease-in;
+}
+.opis a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.flexbox h3 {
+  color: #666666;
+  font-weight: 700;
+  font-size: 22px;
+  font-style: italic;
+}
+
+footer {
+  padding: 25px;
+  margin-top: 30px;
+}
+
+.footer-width {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.footer-width a {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.footer-width img {
+  width: 5%;
+}
+
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 45px;
+  }
+
+  h2 {
+    font-size: 35px;
+  }
+
+  a, p, output, h3, .flexbox h3, .container p, .mapa a {
+    font-size: 30px;
+  }
+
+  .zaglowek__img {
+    width: 5%;
+  }
+
+  .zaglowek,
+.opis,
+.content_main,
+.footer-width,
+.container {
+    padding: 10px 5px 10px 5px;
+    width: 98%;
+  }
+}
+.container {
+  margin: 30px 0 30px 0;
+  padding: 10px;
+}
+.container p {
+  text-align: center;
+  padding: 10px;
+  color: #808080;
+}
+.container__calculate {
+  margin: 20px;
+  transition: box-shadow 0.3s ease-in;
+}
+.container__calculate .action {
+  display: none;
+}
+.container__calculate:hover {
+  box-shadow: 0 0px 30px #1875f0;
+}
+.container__calculate:hover .action {
+  display: block;
+}
+.container__calculate--multiply {
+  width: 600px;
+}
+.container__calculate--divide {
+  width: 150px;
+}
+.container__calculate--to_subtract {
+  width: 250px;
+}
+.container__calculate--to_add {
+  width: 350px;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,47 @@
+@use "../base/variables" as v;
+// @use "sass:math";
+$element_size: 300px;
+$divider: 2;
+$difference: 50px;
+
+.container {
+  @extend %mixin-card_heafer-footer;
+  @extend %mixin-card_flexbox;
+  margin: 30px 0 30px 0;
+  padding: 10px;
+  p {
+    text-align: center;
+    padding: 10px;
+    color: v.$text;
+  }
+  &__calculate {
+    @extend %mixin-card_elements;
+    margin: 20px;
+    transition: box-shadow 0.3s ease-in;
+    .action{
+        display: none;
+    }
+    &:hover {
+        .action{
+            display: block;
+        }
+        box-shadow: 0 0px 30px v.$blue;
+      }
+    &--multiply {
+      width: calc($element_size * $divider);
+      //   width: calculate($element_size, $divider, "m");
+    }
+    &--divide {
+      width: calc($element_size / $divider);
+      //   width: calculate($element_size, $divider, "dz");
+    }
+    &--to_subtract {
+      width: calc($element_size - $difference);
+      //   width: calculate($element_size, $difference, "o");
+    }
+    &--to_add {
+      width: calc($element_size + $difference);
+      //   width: calculate($element_size, $difference, "d");
+    }
+  }
+}
